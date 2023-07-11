@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #F5F3F7;
+   
+    background-color: #222831;
+    color: #EEEEEE;
+}
+
+nav{
+    background: #8B5FBF;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 3.4rem;
+    box-shadow: 0px -8px 20px 0px #000000;
+}
+
+nav .container .left{
+    font-size: 1.4rem;
+    padding: 14px 14px;
+    margin: 0 50px;
+    color: #F5F3F7;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+} 
+
+nav .container .right{
+    padding: 14px 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.items{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    
+}
+.items li{
+    margin: 0 22px;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.left img{
+    height: 10px;
+}
+
+
+.items li a{
+    text-decoration: none;
+    color: #F5F3F7;
+}
+.container p{
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer{
+    background: #8B5FBF;
+    color: #F5F3F7;
+    height: 3.4rem;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0px 8px 20px 0px #000000;
+}
+.main1{
+    display: flex;
+    justify-content: space-evenly;
+}
+.left1{
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    margin: 55px;
+    font-family: 'Roboto', sans-serif;
+}
+.left1 p{
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+.left1 .btn1{
+    display: flex;
+    
+    margin-top: 60px;
+    
+}
+.left1 .btn1 .link1{
+    text-align: center;
+    height: 40px;
+    width: 10.3rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 0 32px;
+    padding-bottom: 14px;
+    background-color: #F0F5F9;
+
+  
+    
+}
+.left1 .btn1 .link1 a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    color: #222831;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.left1 .btn1 .link1 i{
+    padding: 5px;
+}
+.left1 .btn1 .link1:hover{
+    cursor: pointer;
+    background-color: #f6e9ff;
+    color: #222831;
+    border: 3px solid #878787;
+    box-shadow: 0px 8px 20px 0px #000000;
+}
+ 
+.right1{
+    padding: 25px;
+    margin: 0px 75px;
+}
+
+.right1 svg{
+    height: 35rem;
+    background-color: #222831;
+}
+.content{
+    font-size: 2rem;
+}
+.foot{
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+}
+
+
+
