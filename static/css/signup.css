@@ -1,49 +1,52 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: #222831;
     color: #EEEEEE;
 }
 
-nav{
+nav {
     position: relative;
     background: #8B5FBF;
     z-index: 3;
 }
 
-.container{
+.container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     height: 3.4rem;
     box-shadow: 0px -8px 20px 0px #000000;
     font-size: 25px;
-    
+
 }
-.container a{
+
+.container a {
     text-decoration: none;
-    color:#242128;
+    color: #242128;
     font-weight: bolder;
 }
 
-.container1{
-    
+.container1 {
+
     position: relative;
     z-index: 2;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: transparent;
-    color:#242128;
+    color: #242128;
 }
-.container1 .svg1{
+
+.container1 .svg1 {
     height: 650px;
     width: 650px;
 }
-.formCard{
+
+.formCard {
     background-color: #bbb9e9;
     display: flex;
     justify-content: center;
@@ -55,29 +58,34 @@ nav{
     border-radius: 10px;
     box-shadow: 0px 2px 20px 0px #000000;
 }
-.formCard .elem{
+
+.formCard .elem {
     display: flex;
     justify-content: center;
     /* align-items: center; */
     flex-direction: column;
     margin: 10px;
 }
-.formCard h1{
+
+.formCard h1 {
     font-size: 3.1rem;
     font-weight: bolder;
 }
-.formCard div label{
+
+.formCard div label {
     font-size: 2.1rem;
     font-weight: bold;
 }
-.formCard div input{
+
+.formCard div input {
     height: 35px;
     width: 18rem;
     font-size: 1.2rem;
-    background-color:#f7edff; 
-    border-radius: 8px; 
+    background-color: #f7edff;
+    border-radius: 8px;
 }
-.formCard .btn1{
+
+.formCard .btn1 {
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -88,13 +96,16 @@ nav{
     border-radius: 8px;
     font-size: 1.4rem;
 }
-.formCard .btn1 input:hover{
+
+.formCard .btn1 input:hover {
     cursor: pointer;
 }
-.formCard .btn1:hover{
-    background-color: #f6e9ff;
+
+.formCard .btn1:hover {
+    background-color: #000000;
     color: #222831;
     /* border: 3px solid #878787; */
     box-shadow: 0px 0px 20px 0px #878787;
     cursor: pointer;
 }
+
