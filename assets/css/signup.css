@@ -109,3 +109,203 @@ nav {
     cursor: pointer;
 }
 
+@media (max-width:1024px) {
+    .container1 .svg1 {
+        height: 600px;
+        width: 600px;
+    }
+
+    .formCard {
+        background-color: #bbb9e9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 38rem;
+        width: 26rem;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 20px 0px #000000;
+    }
+
+    .formCard h1 {
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+
+    .formCard div label {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .formCard div input {
+        height: 35px;
+        width: 17rem;
+        font-size: 1.2rem;
+        background-color: #f7edff;
+        border-radius: 8px;
+    }
+
+}
+
+@media (max-width:768px) {
+    .container1 {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: transparent;
+        color: #242128;
+        flex-direction: column-reverse;
+    }
+
+    .container1 .svg1 {
+        height: 550px;
+        width: 550px;
+    }
+
+}
+
+@media (max-width:426px) {
+    .formCard {
+        background-color: #bbb9e9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 36rem;
+        width: 23rem;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 20px 0px #000000;
+    }
+
+    .formCard h1 {
+        font-size: 2.5rem;
+        font-weight: bolder;
+    }
+
+    .formCard div label {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .formCard div input {
+        height: 33px;
+        width: 17rem;
+        font-size: 1.2rem;
+        background-color: #f7edff;
+        border-radius: 8px;
+    }
+
+    .formCard .btn1 {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.2rem;
+        width: 12rem;
+        margin-top: 22px;
+        border-radius: 8px;
+        font-size: 1.4rem;
+    }
+
+    .container1 .svg1 {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media (max-width:376px) {
+    .formCard {
+        background-color: #bbb9e9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 32rem;
+        width: 20rem;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 20px 0px #000000;
+    }
+
+    .formCard h1 {
+        font-size: 2.2rem;
+        font-weight: bolder;
+    }
+
+    .formCard div label {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .formCard div input {
+        height: 28px;
+        width: 16rem;
+        font-size: 1.1rem;
+        background-color: #f7edff;
+        border-radius: 8px;
+    }
+
+    .formCard div input {
+        height: 28px;
+        width: 16rem;
+        font-size: 1.1rem;
+        background-color: #f7edff;
+        border-radius: 8px;
+    }
+
+    .container1 .svg1 {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width:321px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3.4rem;
+        box-shadow: 0px -8px 20px 0px #000000;
+        font-size: 22px;
+    }
+
+    .formCard {
+        background-color: #bbb9e9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 30rem;
+        width: 17rem;
+        margin: 10px 0px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 20px 0px #000000;
+    }
+
+    .formCard h1 {
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .formCard div label {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .formCard div input {
+        height: 26px;
+        width: 14rem;
+        font-size: 1.1rem;
+        background-color: #f7edff;
+        border-radius: 8px;
+    }
+
+    .container1 .svg1 {
+        height: 300px;
+        width: 300px;
+    }
+}
