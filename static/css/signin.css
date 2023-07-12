@@ -1,46 +1,49 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: #F5F3F7;
-   
+
     background-color: #222831;
     color: #EEEEEE;
 }
 
-nav{
+nav {
     background: #8B5FBF;
     position: relative;
     z-index: 2;
 }
 
-.container{
+.container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     height: 3.4rem;
     box-shadow: 0px -8px 20px 0px #000000;
     font-size: 25px;
-   
+
 }
-.container a{
+
+.container a {
     text-decoration: none;
-    color:#242128;
+    color: #242128;
     font-weight: bolder;
 }
+
 svg {
     position: absolute;
     top: 0;
     left: 0;
-width: 100%;
-height: 100%;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
     display: block;
     background-color: #222831;
 }
-.container1{
+
+.container1 {
     position: relative;
     z-index: 3;
     display: flex;
@@ -48,7 +51,7 @@ height: 100%;
     align-items: center;
 }
 
-.formCard{
+.formCard {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,12 +65,14 @@ height: 100%;
     border: 2px solid #878787;
     box-shadow: 0px 8px 20px 0px #000000;
 }
-.formCard h1{
+
+.formCard h1 {
     font-size: 3.1rem;
     font-weight: bolder;
     margin-bottom: 26px;
 }
-.formCard .elem{
+
+.formCard .elem {
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -76,13 +81,15 @@ height: 100%;
     padding: 6px;
     font-weight: bold;
 }
-.formCard .elem input{
+
+.formCard .elem input {
     height: 2rem;
     width: 16rem;
     margin: 4px;
     background-color: #f7edff
 }
-.formCard .btn1{
+
+.formCard .btn1 {
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -93,20 +100,146 @@ height: 100%;
     border-radius: 8px;
     font-size: 1.4rem;
 }
-.formCard .btn1 input{
+
+.formCard .btn1 input {
     height: 35px;
     width: 18rem;
     font-size: 1.2rem;
-    background-color:#f7edff; 
-    border-radius: 8px; 
+    background-color: #f7edff;
+    border-radius: 8px;
 }
 
-.formCard .btn1 input:hover{
+.formCard .btn1 input:hover {
     cursor: pointer;
 }
-.formCard .btn1:hover{
-    
+
+.formCard .btn1:hover {
+
     background-color: #f6e9ff;
     color: #222831;
     box-shadow: 0px 0px 20px 0px #878787;
+}
+
+@media (max-width:426px) {
+    nav {
+        width: 100%;
+    }
+
+    .formCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #bbb9e9e5;
+        color: #222831;
+        height: 22em;
+        width: 18em;
+        margin: 5rem;
+        border-radius: 15px;
+        border: 2px solid #878787;
+        box-shadow: 0px 8px 20px 0px #000000;
+    }
+
+    .formCard h1 {
+        font-size: 3rem;
+        font-weight: bolder;
+        margin-bottom: 26px;
+    }
+
+    .formCard .elem {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.5rem;
+        padding: 6px;
+        font-weight: bold;
+    }
+
+    .formCard .elem input {
+        height: 2rem;
+        width: 14rem;
+        margin: 4px;
+        background-color: #f7edff;
+    }
+
+    .formCard .btn1 {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 11rem;
+        margin-top: 22px;
+        border-radius: 8px;
+        font-size: 1.4rem;
+    }
+
+    .formCard .btn1 input {
+        height: 34px;
+        width: 11rem;
+        font-size: 1.2rem;
+        background-color: #f7edff;
+        border-radius: 8px;
+    }
+}
+
+@media(max-width:321px) {
+    .formCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #bbb9e9e5;
+        color: #222831;
+        height: 22em;
+        margin: 0;
+        width: 17.5em;
+        margin-top: 5rem;
+        border-radius: 15px;
+        border: 2px solid #878787;
+        box-shadow: 0px 8px 20px 0px #000000
+    }
+
+    .formCard h1 {
+        font-size: 2.5rem;
+        font-weight: bolder;
+        margin-bottom: 26px;
+    }
+
+    .formCard .elem {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.4rem;
+        padding: 6px;
+        font-weight: bold;
+    }
+
+    .formCard .elem input {
+        height: 2rem;
+        width: 12.5rem;
+        margin: 4px;
+        background-color: #f7edff
+    }
+
+    .formCard .btn1 {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        margin-top: 22px;
+        border-radius: 8px;
+        font-size: 1.4rem;
+        height: 1rem;
+    }
+
+    .formCard .btn1 input {
+        height: 30px;
+        width: 11rem;
+        font-size: 1.2rem;
+        background-color: #f7edff;
+        border-radius: 8px;
+    }
+
+
 }
