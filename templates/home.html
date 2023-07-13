@@ -1438,6 +1438,37 @@
 
             </div>
         </div>
+        <div class="container4">
+            <div class="head1">Top 3 contributors</div>
+            <div class="contributor">
+                <div class="elem">
+                    <div class="image"><img src="/static/img/Nagoba.jpg" alt=""></div>
+                    <div class="name">Iron Nagbanshi</div>
+                    <div class="socials">
+                        <div class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i
+                                    class="fa-brands fa-square-facebook"></i></a><a href="#"><i
+                                    class="fa-brands fa-twitter"></i></a></div>
+                    </div>
+                </div>
+                <div class="elem">
+                    <div class="image"><img src="/static/img/Nagoba.jpg" alt=""></div>
+                    <div class="name">Aryan Nagbanshi</div>
+                    <div class="socials">
+                        <div class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i
+                                    class="fa-brands fa-square-facebook"></i></a><a href="#"><i
+                                    class="fa-brands fa-twitter"></i></a></div>
+                    </div>
+                </div>
+                <div class="elem">
+                    <div class="image"><img src="/static/img/Nagoba.jpg" alt=""></div>
+                    <div class="name">Name</div>
+                    <div class="socials">
+                        <div class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i
+                                    class="fa-brands fa-square-facebook"></i></a><a href="#"><i
+                                    class="fa-brands fa-twitter"></i></a></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
@@ -1455,14 +1486,14 @@
         const dropdownIcon = document.querySelector('.fa-bars')
         const dropdown = document.querySelector('.dropdown')
 
-        toggleBtn.onclick = function(){
+        toggleBtn.onclick = function () {
             dropdown.classList.toggle('open')
-            let isOpen=dropdown.classList.contains('open')
-            if(isOpen){
+            let isOpen = dropdown.classList.contains('open')
+            if (isOpen) {
                 dropdownIcon.classList.add('fa-xmark');
                 dropdownIcon.classList.remove('fa-bars')
             }
-            else{
+            else {
                 dropdownIcon.classList.add('fa-bars');
                 dropdownIcon.classList.remove('fa-xmark')
             }
