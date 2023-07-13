@@ -1,0 +1,140 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <script src="https://kit.fontawesome.com/d3adfc3387.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- navbar starts -->
+    <nav>
+        <div class="container">
+            <div class="left">Scribble Haven</div>
+            <div class="right">
+                <ul class="items">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="">Create</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="toggle"><i class="fa-solid fa-bars"></i></div>
+            <div class="dropdown">
+                <ul class="Li-items">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="">Create</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ends -->
+    <main>
+        <!-- About Us section -->
+        <div class="container2">
+            <div class="left">
+                <img src="/static/img/sal.jpeg" alt="">
+            </div>
+            <div class="right">
+                <div class="content">
+                    <h2>About Us</h2>
+                    <div class="elem"><i class="fa-brands fa-blogger"></i>
+                        <div class="content1"><span>Start Your career as blogger</span>
+                            <p>Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Unde, laborum?</p>
+                        </div>
+                    </div>
+                    <div class="elem"><i class="fa-solid fa-square-pen"></i>
+                        <div class="content1"><span>Write your own blogs</span>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing
+                                elit. Unde, laborum?</p>
+                        </div>
+                    </div>
+                    <div class="elem"><i class="fa-solid fa-earth-americas"></i>
+                        <div class="content1"><span>Get to know the world</span>
+                            <p>Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Unde, laborum?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="staff">
+            <div class="head1">Our Team</div>
+            <div class="contributor">
+                <div class="elem">
+                    <div class="image"><img src="/static/img/Nagoba.jpg" alt=""></div>
+                    <div class="name">Aryan Nagbanshi</div>
+                    <div class="socials">
+                        <div class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i
+                                    class="fa-brands fa-square-facebook"></i></a><a href="https://github.com/WiseyXD"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+                <div class="elem">
+                    <div class="image"><img src="/static/img/GOAT.jpg" alt=""></div>
+                    <div class="name">Sahil Nikshe</div>
+                    <div class="socials">
+                        <div class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i
+                                    class="fa-brands fa-square-facebook"></i></a><a href="https://github.com/Overwatch0812"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+                <div class="elem">
+                    <div class="image"><img src="/static/img/surya.jpg" alt=""></div>
+                    <div class="name">Sahil Suryawanshi</div>
+                    <div class="socials">
+                        <div class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i
+                                    class="fa-brands fa-square-facebook"></i></a><a href="#"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <!-- footer starts -->
+    <footer>
+        <div class="foot">
+            Created and maintained By The G.O.A.T
+        </div>
+    </footer>
+    <!-- footer ends -->
+
+    <script>
+        const toggle = document.querySelector('.toggle')
+        const dropdownIcon = document.querySelector('.fa-bars')
+        const dropdown = document.querySelector('.dropdown')
+
+        toggle.onclick = function () {
+            dropdown.classList.toggle('open')
+
+            const isOpen = dropdown.classList.contains('open')
+
+            if (isOpen) {
+                dropdownIcon.classList.add('fa-xmark');
+                dropdownIcon.classList.remove('fa-bars')
+            }
+            else {
+                dropdownIcon.classList.add('fa-bars');
+                dropdownIcon.classList.remove('fa-xmark')
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
