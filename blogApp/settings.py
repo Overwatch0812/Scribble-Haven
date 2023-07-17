@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--%2ar(fu28-fimh@kpge*3fz0+5y2xtz@8*7e@77q_r$^q@=^4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -47,8 +47,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'fontawesomefree',
     'account',
+    'utilities'
 ]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -83,10 +83,20 @@ WSGI_APPLICATION = 'blogApp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = {
-    'default': dj_database_url.parse(env('DATABASE_URL'))
+if DEBUG:
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Blogs',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST':'localhost',
+    }
 }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(env('DATABASE_URL'))
+    }
 # To manage static files in production
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dkg89jcmm',

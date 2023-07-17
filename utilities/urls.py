@@ -4,4 +4,5 @@ urlpatterns=[
     path('home',views.home,name='home'),
     path('about',views.about,name='about'),
     path('create',views.create,name='create'),
+    path('feed',views.feed,name='feed'),
 ]
