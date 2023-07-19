@@ -14,7 +14,7 @@ from pathlib import Path
 import environ
 import dj_database_url
 
-env=environ.Env()
+env = environ.Env()
 environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -41,9 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    # 'cloudinary_storage',
     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'cloudinary',
     'fontawesomefree',
     'account',
@@ -65,7 +65,7 @@ ROOT_URLCONF = 'blogApp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -85,24 +85,29 @@ WSGI_APPLICATION = 'blogApp.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 if DEBUG:
     DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Blogs',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST':'localhost',
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'Scribble_haven',
+            'USER': 'postgres',
+            'PASSWORD': '1234',
+            'HOST': 'localhost',
+        }
     }
-}
+
 else:
     DATABASES = {
         'default': dj_database_url.parse(env('DATABASE_URL'))
     }
+
+
 # To manage static files in production
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dkg89jcmm',
-    'API_KEY': '315726417185918',
-    'API_SECRET': 'oJ19ydA3_pDyvIWUQveI0hr7Q3E'
-}
+
+# mediaFIles configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -138,15 +143,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS=[
-    os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
 ]
-STATIC_ROOT=os.path.join(BASE_DIR,'assets')
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#registering our custom user model
-AUTH_USER_MODEL='account.CustomUser'
+# registering our custom user model
+AUTH_USER_MODEL = 'account.CustomUser'

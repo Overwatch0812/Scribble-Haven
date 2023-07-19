@@ -23,7 +23,7 @@
             <div class="right">
                 <ul class="items">
                     <li><a href="home">Home</a></li>
-                    <li><a href="#">Feeds</a></li>
+                    <li><a href="feed">Feeds</a></li>
                     <li><a href="#">Create</a></li>
                     <li><a href="about">About</a></li>
                     <li><a href="">Contact Us</a></li>
@@ -33,7 +33,7 @@
             <div class="dropdown">
                 <ul class="Li-items">
                     <li><a href="home">Home</a></li>
-                    <li><a href="#">Feeds</a></li>
+                    <li><a href="feed">Feeds</a></li>
                     <li><a href="#">Create</a></li>
                     <li><a href="about">About</a></li>
                     <li><a href="">Contact Us</a></li>
@@ -50,17 +50,17 @@
             <button class="" id="AI">Generate</button>
         </div>
         <div class="box">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="" method="POST" enctype="multipart/form-data">
                 {%csrf_token%}
                 <div class="form">
                     <h1>Create a blog</h1>
                     <div class="form_elem">
-                        
+
                         <div class="andya">
-                            <div class="element" id="form"><label for="title">Title</label>
+                            <div class="element" id="form"><label for="title">Title<span>*</span></label>
                                 <input type="text" id="title" name="title">
                             </div>
-                            <div class="element"><label for="genre">Genre</label>
+                            <div class="element"><label for="genre">Genre<span>*</span></label>
                                 <select name="genre" id="genre">
                                     <option value="travel">Travel Blog</option>
                                     <option value="food">Food Blog</option>
@@ -70,17 +70,16 @@
                                     <option value="other">Other</option>
                                 </select>
                             </div>
-                            <div class="element"><label for="file">Files</label>
-                                <input type="file" accept="video/*,image/*" multiple name="file"
-                                id="file" >
+                            <div class="element"><label for="img">Images/Videos</label>
+                                <input type="file" alt="Image" name="img" id="img" multiple>
                             </div>
                         </div>
-                        <div class="element"><label for="desc">Describe Your Thoughts</label>
+                        <div class="element"><label for="desc">Describe Your Thoughts<span>*</span></label>
                             <textarea id="desc" name="description">
                             </textarea>
 
                         </div>
-                        
+
                     </div>
                     <div class="buton">
                         <input type="submit" value="Create">
