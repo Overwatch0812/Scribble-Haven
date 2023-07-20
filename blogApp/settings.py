@@ -30,6 +30,7 @@ SECRET_KEY = 'django-insecure--%2ar(fu28-fimh@kpge*3fz0+5y2xtz@8*7e@77q_r$^q@=^4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+
 ALLOWED_HOSTS = ['*']
 
 
@@ -100,11 +101,20 @@ else:
     }
 
 
-# To manage static files in production
-
+# To manage media files in production
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': env('CLOUD_NAME'),
+    'API_KEY': env('API_KEY'),
+    'API_SECRET': env('API_SECRET')
+}
 # mediaFIles configuration
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+if DEBUG:
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+else:
+    MEDIA_URL = '/media/' 
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 
 

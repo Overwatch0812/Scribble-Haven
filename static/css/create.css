@@ -66,6 +66,9 @@ nav {
     color: #ffffff;
 }
 
+.star{
+    color: red !important;
+}
 
 .container .dropdown ul li:hover {
     background-color: #222831;

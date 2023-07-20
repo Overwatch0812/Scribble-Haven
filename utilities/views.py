@@ -18,8 +18,7 @@ def create(request):
             blogs=blog()
             blogs.title=title
             blogs.genre=genre
-            for i in file:
-                blogs.file=file
+            blogs.file=file
             blogs.description=description
             blogs.save()
             return redirect('feed')
