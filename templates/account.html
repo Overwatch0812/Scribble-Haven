@@ -1,0 +1,101 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/account.css' %}">
+    <script src="https://kit.fontawesome.com/d3adfc3387.js" crossorigin="anonymous"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar starts -->
+    <nav>
+        <div class="container">
+            <div class="left">Scribble Haven</div>
+            <div class="right">
+                <ul class="items">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="feed">Feeds</a></li>
+                    <li><a href="create">Create</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="toggle"><i class="fa-solid fa-bars"></i></div>
+            <div class="dropdown">
+                <ul class="Li-items">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="feed">Feeds</a></li>
+                    <li><a href="create">Create</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar ends -->
+    <main>
+        <div class="head1">
+            <div class="image1">
+                <img src="{{accounts.profile_img.url}}" alt="">
+                <p>{{accounts.name}}</p>
+            </div>
+            <div class="stats">
+                <div class="blogs">
+                    <p class="counts">{{count}}</p>
+                    <label for="counts">Blogs</label>
+                </div>
+                <div class="followers">
+                    <p class="counts">100</p>
+                    <label for="counts">Followers</label>
+                </div>
+                <div class="following">
+                    <p class="counts">100</p>
+                    <label for="counts">Following</label>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="buttons">
+                <div class="button"><a href="#">Edit Profile</a></div>
+                <div class="button"><a href="">Share profile</a></div>
+            </div>
+        </div>
+
+    </main>
+    <!-- footer starts -->
+    <footer>
+        <div class="foot">
+            Created and maintained By The G.O.A.T
+        </div>
+    </footer>
+    <!-- footer ends -->
+    <script>
+        const toggleBtn = document.querySelector('.toggle')
+        const dropdownIcon = document.querySelector('.fa-bars')
+        const dropdown = document.querySelector('.dropdown')
+
+        toggleBtn.onclick = function () {
+            dropdown.classList.toggle('open')
+            let isOpen = dropdown.classList.contains('open')
+            if (isOpen) {
+                dropdownIcon.classList.add('fa-xmark');
+                dropdownIcon.classList.remove('fa-bars')
+            }
+            else {
+                dropdownIcon.classList.add('fa-bars');
+                dropdownIcon.classList.remove('fa-xmark')
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222831;
+    color: #F5F3F7;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+nav {
+    background: #8B5FBF;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    height: 3.4rem;
+    box-shadow: 0px 20px 20px 0px #00000085;
+    z-index: 2;
+}
+
+.container .left {
+    font-size: 1.4rem;
+    padding: 14px 14px;
+    margin: 0 50px;
+    color: #F5F3F7;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+.container .right {
+    padding: 14px 14px;
+    font-family: 'Roboto', sans-serif;
+    /* position: relative; */
+}
+
+.container .toggle {
+    display: none;
+}
+
+.container .dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    display: none;
+    font-size: 2rem;
+    background-color: #000000da;
+    color: #ffffff;
+    text-align: center;
+}
+
+.container .dropdown ul li {
+    z-index: 10;
+    list-style: none;
+}
+
+.container .dropdown a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+.container .dropdown ul li:hover {
+    background-color: #222831;
+}
+
+.container .right .items {
+    display: flex;
+    justify-content: center;
+}
+
+.container .right .items li {
+    list-style: none;
+    margin: 0 22px;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container .right .items a {
+    text-decoration: none;
+    color: #F5F3F7;
+}
+
+/* navbar ends */
+
+
+/* footer */
+footer {
+    background: #8B5FBF;
+    color: #F5F3F7;
+    height: 3.4rem;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0px -5px 20px 0px #000000;
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+}
+
+/* footer ends */
+
+/* main starts */
+.head1{
+    display: flex;
+    justify-content: center;
+    gap:3rem;
+    margin: 1rem 0rem;
+}
+.head1 .image1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.head1 .image1 p{
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+.head1 .image1 img{
+    border-radius: 100%;
+    height: 10rem;
+}
+.head1 .stats{
+    display: flex;
+    gap: 5rem;
+    padding: 1rem 0rem;
+    font-size: 2rem;
+}
+.head1 .stats .blogs .counts{
+    text-align: center;
+}
+.head1 .stats .followers .counts{
+    text-align: center;
+}
+.head1 .stats .following .counts{
+    text-align: center;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+}
+.controls .buttons{
+    display: flex;
+    gap:2rem;
+    font-size: 1.5rem;
+}
+
+.controls .buttons .button{
+    box-shadow:  0px 0px 20px 0px #00000091;;
+    border-radius: 0.8rem;
+    margin: 1rem 0rem;
+}
+
+.controls .buttons .button a{
+    text-decoration: none;
+    height: 4rem;
+    width: 23rem;
+    border-radius: 0.8rem;
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+    box-shadow: inset 0px 20px 20px 0px #000000;
+}
+.controls .buttons .button a:hover{
+    background-color: #0f1115;
+}
+
+
+
+
+/* main ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    nav {
+        background-color: #8B5FBF;
+        width: 100%;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        height: 3.4rem;
+        width: 100%;
+        box-shadow: 0px 20px 20px 0px #00000085;
+        z-index: 2;
+    }
+
+    .container .left {
+        font-size: 1.6rem;
+        padding: 9px 8px;
+
+        color: #F5F3F7;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+    }
+
+    .container .toggle {
+        display: none;
+    }
+
+    .container .dropdown {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 100%;
+        display: none;
+        font-size: 2rem;
+        background-color: #000000da;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .open {
+        display: block !important;
+    }
+
+    .container .dropdown ul li {
+        z-index: 10;
+        list-style: none;
+    }
+
+    .container .dropdown a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+
+    .container .dropdown ul li:hover {
+        background-color: #222831;
+    }
+
+    .container .right .items {
+        padding: 14px 14px;
+        font-family: 'Roboto', sans-serif;
+        display: none;
+    }
+
+    .container .toggle {
+        display: block;
+        margin: 10px;
+        font-size: 2rem;
+    }}

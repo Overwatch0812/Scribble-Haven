@@ -1,0 +1,126 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/edit_blog.css' %}">
+    <script src="https://kit.fontawesome.com/d3adfc3387.js" crossorigin="anonymous"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar starts -->
+    <nav>
+        <div class="container">
+            <div class="left">Scribble Haven</div>
+            <div class="right">
+                <ul class="items">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="feed">Feeds</a></li>
+                    <li><a href="create">Create</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Accout</a></li>
+                </ul>
+            </div>
+            <div class="toggle"><i class="fa-solid fa-bars"></i></div>
+            <div class="dropdown">
+                <ul class="Li-items">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="feed">Feeds</a></li>
+                    <li><a href="create">Create</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Accout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar ends -->
+    <main>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {%csrf_token%}
+            <div class="container1">
+                <div class="container2">
+                    <h1>Edit blog</h1>
+                    <div class="main_elemz">
+                        <div class="left_elemz">
+                            <div class="elem"><label for="title">Title</label>
+                                <input type="text" name="title" id="title" value="{{blogs.title}}">
+                            </div>
+                            <div class="elem"><label for="author">Author</label>
+                                <input type="text" name="author" id="author" value="{{blogs.author}}">
+                            </div>
+                            <div class="elem"><label for="genre">Genre</label>
+                                <select name="genre" id="genre">
+                                    <option value="{{blogs.genre}}">Travel Blog</option>
+                                    <option value="Food Blog">Food Blog</option>
+                                    <option value="Health and fitness Blog">Health and fitness Blog</option>
+                                    <option value="Personal Blog">Personal Blog</option>
+                                    <option value="Sports Blog">Sports Blog</option>
+                                    <option value="Other" selected>Other</option>
+                                    <option value="{{blogs.genre}}" selected>{{blogs.genre}}(selected)</option>
+                                </select>
+                            </div>
+                            <div class="elem"><label for="img">Images/Videos</label>
+                                <input type="file" alt="Image" name="sahil" id="img" multiple>
+                            </div>
+                        </div>
+                        <div class="right_elemz">
+                            <div class="elem"><label for="desc">Describe Your Thoughts</label>
+                                <textarea id="desc" name="description">
+                                    {{blogs.description}}
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="butonn" id="btn">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </main>
+
+
+
+
+
+
+
+
+    <!-- footer starts -->
+    <footer>
+        <div class="foot">
+            Created and maintained By The G.O.A.T
+        </div>
+    </footer>
+    <!-- footer ends -->
+    <script>
+        const toggleBtn = document.querySelector('.toggle')
+        const dropdownIcon = document.querySelector('.fa-bars')
+        const dropdown = document.querySelector('.dropdown')
+
+        toggleBtn.onclick = function () {
+            dropdown.classList.toggle('open')
+            let isOpen = dropdown.classList.contains('open')
+            if (isOpen) {
+                dropdownIcon.classList.add('fa-xmark');
+                dropdownIcon.classList.remove('fa-bars')
+            }
+            else {
+                dropdownIcon.classList.add('fa-bars');
+                dropdownIcon.classList.remove('fa-xmark')
+            }
+        }
+    </script>
+</body>
+
+</html>

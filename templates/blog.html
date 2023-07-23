@@ -22,33 +22,67 @@
             <div class="left">Scribble Haven</div>
             <div class="right">
                 <ul class="items">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="home">Home</a></li>
                     <li><a href="feed">Feeds</a></li>
                     <li><a href="create">Create</a></li>
                     <li><a href="about">About</a></li>
                     <li><a href="">Contact Us</a></li>
+                    <li><a href="">Accout</a></li>
                 </ul>
             </div>
             <div class="toggle"><i class="fa-solid fa-bars"></i></div>
             <div class="dropdown">
                 <ul class="Li-items">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="home">Home</a></li>
                     <li><a href="feed">Feeds</a></li>
                     <li><a href="create">Create</a></li>
                     <li><a href="about">About</a></li>
                     <li><a href="">Contact Us</a></li>
+                    <li><a href="">Accout</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Navbar ends -->
-
-
-    <h1>{{blog.title}}</h1>
-    {{blog.genre}}<br>
-    <img src="{{blog.file.url}}" alt=""><br>
-    {{blog.description}}
-
+    <main>
+        <div class="title">
+            <h1>{{blog.title}}</h1>
+        </div>
+        <div class="main1">
+            <div class="leftz">
+                <div class="top"><img src="{{blog.file.url}}" alt=""></div>
+                <div class="bottom">
+                    <div class="author">
+                        <h3>Author</h3>
+                        <p>{{blog.author}}</p>
+                    </div>
+                    <div class="genrez">
+                        <h3>Genre</h3>
+                        <p>{{blog.genre}}</p>
+                    </div>
+                    <div class="rel-img">
+                        <h3>Related images:</h3>
+                    </div>
+                    <div class="more-img">
+                        <form action="">
+                            <input type="file" name="more_img" id="">
+                            <input type="submit" value="Upload">
+                        </form>
+                    </div>
+                    <div class="edit-blog">
+                        <label for="EDIT">Click here to edit your blog</label>
+                        <div class="butun">
+                            <i class="fa-solid fa-hand-point-right"></i><a href="{% url 'edit_blog' blog.id %}" id="EDIT">EDIT</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="rightz">
+                <p>{{blog.description}}</p>
+            </div>
+        </div>
+    </main>
 
     <!-- footer starts -->
     <footer>
